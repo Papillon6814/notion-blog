@@ -27,6 +27,8 @@ export const getAllPosts = async (): Promise<Post[]> => {
       page_size: 100,
     });
     hasMore = res.has_more;
+
+    // @ts-ignore
     allResults.push(...res.results);
   }
 
